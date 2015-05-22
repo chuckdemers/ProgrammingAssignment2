@@ -42,7 +42,6 @@ makeCacheMatrix <- function(x = matrix()) {
 ##    returns the inverse
 
 cacheSolve <- function(x, ...) {
-	## Return a matrix that is the inverse of 'x'
 
 	minv <- x$getinv()
 	if( !is.null(minv) ){
@@ -50,7 +49,7 @@ cacheSolve <- function(x, ...) {
 		return( minv )
 	}
 	data <- x$get()
-  minv <- solve(data)
-  x$setinv( minv )
-  minv
+	minv <- solve(data)
+	x$setinv( minv )
+	minv
 }
